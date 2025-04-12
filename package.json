@@ -1,0 +1,30 @@
+{
+  "name": "sobel-ts",
+  "version": "1.0.0",
+  "description": "TypeScript implementation of Sobel edge detection algorithm for image processing",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "start:browser": "parcel examples/browser/index.html"
+  },
+  "keywords": [
+    "sobel",
+    "edge-detection",
+    "image-processing",
+    "computer-vision",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@parcel/transformer-typescript-tsc": "^2.14.4",
+    "@types/node": "^22.14.1",
+    "parcel": "^2.14.4",
+    "typescript": "^5.8.3"
+  }
+}
