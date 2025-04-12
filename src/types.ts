@@ -1,4 +1,14 @@
 /**
+ * Defines a type for the supported output formats of the Sobel operator.
+ */
+export type OutputFormat = 'magnitude' | 'x' | 'y' | 'direction';
+
+/**
+ * Defines the supported kernel sizes for the Sobel operator.
+ */
+export type KernelSize = 3 | 5;
+
+/**
  * Platform-agnostic interface for image data
  * Compatible with both browser's ImageData and Node.js buffers
  */
