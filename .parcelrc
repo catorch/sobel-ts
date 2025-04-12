@@ -1,0 +1,13 @@
+{
+  "extends": "@parcel/config-default",
+  "transformers": {
+    "*.html": [
+      "@parcel/transformer-html",
+      "..."
+    ],
+    "*.{ts,tsx}": [
+      "@parcel/transformer-typescript-tsc",
+      "..."
+    ]
+  }
+} 
