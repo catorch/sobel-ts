@@ -8,13 +8,21 @@
   "files": [
     "dist"
   ],
+  "targets": {
+    "browser-demo": {
+      "source": "examples/browser/index.html",
+      "isLibrary": false,
+      "distDir": "docs",
+      "publicUrl": "./"
+    }
+  },
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
-    "start:browser": "parcel examples/browser/index.html",
-    "build:gh-pages": "parcel build examples/browser/index.html --dist-dir dist --public-url ./",
+    "start:browser": "npm run build && parcel --target browser-demo",
+    "build:gh-pages": "npm run build && PARCEL_WORKERS=0 parcel build --target browser-demo",
     "predeploy": "npm run build:gh-pages",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d docs"
   },
   "keywords": [
     "sobel",
@@ -26,10 +34,13 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@parcel/transformer-html": "^2.14.4",
     "@parcel/transformer-typescript-tsc": "^2.14.4",
+    "@parcel/transformer-typescript-types": "^2.14.4",
     "@types/node": "^22.14.1",
     "gh-pages": "^6.1.1",
     "parcel": "^2.14.4",
+    "svgo": "^3.3.2",
     "typescript": "^5.8.3"
   }
 }
