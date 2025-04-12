@@ -1,0 +1,1 @@
+export { Sobel } from './sobel';
