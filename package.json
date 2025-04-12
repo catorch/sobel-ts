@@ -4,13 +4,17 @@
   "description": "TypeScript implementation of Sobel edge detection algorithm for image processing",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "homepage": "https://catorch.github.io/sobel-ts/",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
-    "start:browser": "parcel examples/browser/index.html"
+    "start:browser": "parcel examples/browser/index.html",
+    "build:gh-pages": "parcel build examples/browser/index.html --dist-dir dist --public-url ./",
+    "predeploy": "npm run build:gh-pages",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [
     "sobel",
@@ -24,6 +28,7 @@
   "devDependencies": {
     "@parcel/transformer-typescript-tsc": "^2.14.4",
     "@types/node": "^22.14.1",
+    "gh-pages": "^6.1.1",
     "parcel": "^2.14.4",
     "typescript": "^5.8.3"
   }
