@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "homepage": "https://catorch.github.io/sobel-ts/",
+  "homepage": "https://github.com/catorch/sobel-ts",
   "files": [
     "dist/index.js",
     "dist/index.d.ts",

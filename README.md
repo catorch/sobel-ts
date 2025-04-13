@@ -1,6 +1,6 @@
 # sobel-ts
 
-![npm](https://img.shields.io/npm/v/sobel-ts)
+[![npm](https://img.shields.io/npm/v/sobel-ts)](https://www.npmjs.com/package/sobel-ts)
 ![license](https://img.shields.io/badge/license-MIT-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-4.9%2B-blue)
 
