@@ -34,3 +34,4 @@ lerna-debug.log*
 
 # Optional local config files
 config.local.js 
+docs
