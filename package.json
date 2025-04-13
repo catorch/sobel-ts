@@ -2,12 +2,26 @@
   "name": "sobel-ts",
   "version": "1.0.0",
   "description": "TypeScript implementation of Sobel edge detection algorithm for image processing",
+  "type": "module",
   "main": "dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "homepage": "https://catorch.github.io/sobel-ts/",
   "files": [
-    "dist"
+    "dist/index.js",
+    "dist/index.d.ts",
+    "dist/sobel.js",
+    "dist/sobel.d.ts",
+    "dist/types.js",
+    "dist/types.d.ts"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "targets": {
     "browser-demo": {
       "source": "examples/browser/index.html",
@@ -17,7 +31,8 @@
     }
   },
   "scripts": {
-    "build": "tsc",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc",
     "prepare": "npm run build",
     "start:browser": "npm run build && parcel --target browser-demo",
     "build:gh-pages": "npm run build && PARCEL_WORKERS=0 parcel build --target browser-demo",
@@ -31,7 +46,7 @@
     "computer-vision",
     "typescript"
   ],
-  "author": "",
+  "author": "catorch",
   "license": "MIT",
   "devDependencies": {
     "@parcel/transformer-html": "^2.14.4",

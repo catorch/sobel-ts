@@ -1,1 +1,1 @@
-export { Sobel } from './sobel';
+export { Sobel } from './sobel.js';
