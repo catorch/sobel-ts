@@ -1,6 +1,6 @@
 {
   "name": "sobel-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TypeScript implementation of Sobel edge detection algorithm for image processing",
   "type": "module",
   "main": "dist/index.js",
